@@ -7,7 +7,8 @@ def LogMiddleware(get_response):
         log_method = request.method
         log_path = request.path
         request_log = LogModel(path=log_path, method=log_method)
-        request_log.save()
+        if log_path != '/admin/':
+            request_log.save()
         return response
 
     return middleware
