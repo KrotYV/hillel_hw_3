@@ -1,5 +1,6 @@
 from .models import LogModel
 
+
 def LogMiddleware(get_response):
     def middleware(request):
         response = get_response(request)

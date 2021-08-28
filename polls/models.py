@@ -12,6 +12,7 @@ method = [
     ('OPTIONS', 'method OPTIONS'),
 ]
 
+
 class LogModel(models.Model):
     path = models.CharField(max_length=200)
     method = models.CharField(max_length=200, choices=method)

@@ -1,5 +1,7 @@
 from django.contrib import admin
+
 from .models import LogModel
+
 
 @admin.register(LogModel)
 class AdminModel(admin.ModelAdmin):
@@ -7,5 +9,3 @@ class AdminModel(admin.ModelAdmin):
     date_hierarchy = 'timestamp'
     list_filter = ['method']
     search_fields = ['path']
-
-
